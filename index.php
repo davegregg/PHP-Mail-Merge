@@ -33,13 +33,15 @@
 **		   - further documentation!
 **			 - the records and logs
 **		   - add logging OPTION!
+**		   - memory optimization
 **		   - add memory-limit-error prevention, by providing an option for the user to provide
 **			 a list of files containing address-values sets, instead of list of sets directly
 **		     into the form
 **		   - strip whitespace and newlines from between address-values sets intelligently
 **		   - add option to pull the template from a file
-**		   - additional security feature(s)?
+**		   - additional security feature(s)? Go back through with escaping in mind.
 **		   - more error handling?
+**		   - UI/UX improvements
 **
 **
 */
