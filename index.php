@@ -46,8 +46,8 @@
 **
 */
 
-// Simple security measure, requiring the query variable 'p' to be returned 
-// with a password value
+// Embarrassingly-simple pass check, requiring the query variable 'p' to be returned 
+// with a valid value, else terminate the app
 if ($_GET['p']!='pass'){die();}
 
 // Run code only after the form has been submitted
@@ -300,7 +300,7 @@ IN-LOOP CAMPAIGN RECORDS FILE HANDLING
 		// Append a new line to the log variable to complete the row in the log file CSV
 		$logrecord .= '"'."\r\n";
 		
-		// Open the PHP file for record the email HTML
+		// Open the PHP file for recording the email HTML
 		$htmlrecordfile = fopen($recordfn, 'w+') or die('There was a problem creating the file record for an email to ' . $recipient);
 		$htmlrecord = '<?php ';
 		
