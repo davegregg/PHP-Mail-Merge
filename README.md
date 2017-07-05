@@ -1,7 +1,9 @@
-PHP-Mail-Merge
+PHP Mail Merge
 ==============
 
-Dm/G PHP Mail Merge distributes *variable* email campaigns. If you need to send a single templated email to a large number of recipients, but you want each email to be slightly different (e.g. for branding purposes, or to include the recipient's name or a unique promotional code), then PHP Mail Merge can help you. 
+PHP Mail Merge distributes *variable* email campaigns. If you need to send a single basic email to a large number of recipients, but you want each email to be slightly different (e.g. for branding purposes, or to include the recipient's name or a unique promotional code), then PHP Mail Merge can help you. 
+
+This was my first PHP project, churned out quickly over a long weekend to fill a particular company requirement, and I haven't taken the chance to go back over it. For a few thousand emails, I can tell you it worked reliably and reproducibly for several months. 
 
 1. Supply PHP Mail Merge with a template, containing unique variables in the places you need the varying content to go. 
 2. Supply a comma-delimited list of these variables, so PHP Mail Merge knows what to look for in your template. 
@@ -22,11 +24,13 @@ Tips
     
 TODOs
 =====
-* **Optimization for scaling:** the app works fine for a few thousand emails at a time. I've not had an occasion to test this with larger jobs.
 * **Security review** (e.g. sanitization)
-* **Refactoring:** This was written ~2010. I didn't observe a popular styleguide. And PHP itself has changed quite a bit since then anyway. So this code should be revised for new patterns and practices.
+* **Refactoring:** This was written ~2010. I didn't observe a popular styleguide. And PHP itself has changed quite a bit since then, both with the advent of PHP 5 and with developed conventions. So this code should be revised for new patterns and practices.
+* **Optimization for scaling:** the app works fine for a few thousand emails at a time. I've not had an occasion to test this with larger jobs.
 * **UI/UX update:** it's certainly not pretty. It was a quick solution for a technician.
 * More documentation (e.g. for records and logs)
+* Replace `___dmgmmFoo` template variables with the common convention of `%foo%` or `{{foo}}`
+* Use Heredocs insteads of sequences of appended strings
 * Add a logging option
 * Add memory-limit-error mitigation, by providing an option for the user to give a list of files containing address-values sets, instead of a list of sets directly into the form
 * Strip whitespace and newlines from between address-values sets intelligently
