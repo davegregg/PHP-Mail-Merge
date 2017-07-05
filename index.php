@@ -4,46 +4,7 @@
 **
 ** Author:  David Michael Gregg [https://github.com/davegregg]
 ** License: GNU General Public License (GPL) version 3 [http://www.gnu.org/licenses/gpl-3.0.txt]
-** Support: I do not guarantee that I will respond to support inquiries or feature requests.
-**
-**
-** --TIPS----------------------------
-**   * Variables can be used not only in the body of the email, but
-**     in the subject line, sender's address, and reply-to address,
-**     which are especially handy for dynamic branding
-**   * There are a few hardcoded variables you should know:
-**		'___dmgmmURL' returns the URL of the webversion of the email
-**			(obviously, for providing a 'view-in-your-browser' copy
-**			 of the email to recipients)
-**		'___dmgmmTrackThis_' (note the trailing underscore) when added to
-**			the beginning of a URL in an anchor link, the link will redirect
-**			the user through the PHP of the webversion file which will track
-**			the click in the view log and then forward the user on to the
-**			destination URL
-**		'___dmgmmRecipient' returns the recipient's email address
-**			(in case you want to repeat a recipient's email address to them
-**		'___dmgmmSender' returns the sender's email address
-**			(handy for dynamic email signatures and the like)
-**		'___dmgmmReplyTo' returns the reply-to email address
-**			(handy for unsubscribe mailto links and the like)
-**		'___dmgmmSubject' returns the reply-to email address
-**			(handy for the HTML title tag in the webversion, for example)
-**
-**-TO-DO--------------------------------------------------------------------------------------
-**		   - further documentation!
-**			 - the records and logs
-**		   - add logging OPTION!
-**		   - memory optimization
-**		   - add memory-limit-error prevention, by providing an option for the user to provide
-**			 a list of files containing address-values sets, instead of list of sets directly
-**		     into the form
-**		   - strip whitespace and newlines from between address-values sets intelligently
-**		   - add option to pull the template from a file
-**		   - additional security feature(s)? Go back through with escaping in mind.
-**		   - more error handling?
-**		   - UI/UX improvements
-**
-**
+** Support: I do not guarantee that I will respond to support inquiries or feature requests. But I probably will.
 */
 
 // Embarrassingly-simple pass check, requiring the query variable 'p' to be returned 
