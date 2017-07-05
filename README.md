@@ -9,6 +9,17 @@ Dm/G PHP Mail Merge distributes *variable* email campaigns. If you need to send 
 
 PHP Mail Merge will parse through the template looking for each variable, replacing it with the value you supplied, and then send the final email to the address you supplied. Webversions of each email are generated for the recipient to view in their browser (if desired) and click-tracking functionality is built-in.
 
+Tips
+====
+* Variables can be used not only in the body of the email, but in the subject line, sender's address, and reply-to address, which are especially handy for dynamic branding
+* There are a few hardcoded variables you should know:
+    `___dmgmmURL` returns the URL of the webversion of the email (obviously, for providing a 'view-in-your-browser' copy of the email to recipients)
+    `___dmgmmTrackThis_` (note the trailing underscore) when prefixed to a URL in an anchor link, the link will redirect the user through the PHP of the webversion file which will track the click in the view log and then forward the user on to the destination URL
+    `___dmgmmRecipient` returns the recipient's email address (in case you want to repeat a recipient's email address to them
+    `___dmgmmSender` returns the sender's email address (handy for dynamic email signatures and the like)
+    `___dmgmmReplyTo` returns the reply-to email address (handy for unsubscribe mailto links and the like)
+    `___dmgmmSubject` returns the reply-to email address (handy for the HTML title tag in the webversion, for example)
+    
 TODOs
 =====
 - **Optimization for scaling:** the app works fine for a few thousand emails at a time. I've not had an occasion to test this with larger jobs.
@@ -21,14 +32,3 @@ TODOs
 - Strip whitespace and newlines from between address-values sets intelligently
 - Add option to pull the template from a file
 - More error handling
-
-Tips
-====
-* Variables can be used not only in the body of the email, but in the subject line, sender's address, and reply-to address, which are especially handy for dynamic branding
-* There are a few hardcoded variables you should know:
-    `___dmgmmURL` returns the URL of the webversion of the email (obviously, for providing a 'view-in-your-browser' copy of the email to recipients)
-    `___dmgmmTrackThis_` (note the trailing underscore) when prefixed to a URL in an anchor link, the link will redirect the user through the PHP of the webversion file which will track the click in the view log and then forward the user on to the destination URL
-    `___dmgmmRecipient` returns the recipient's email address (in case you want to repeat a recipient's email address to them
-    `___dmgmmSender` returns the sender's email address (handy for dynamic email signatures and the like)
-    `___dmgmmReplyTo` returns the reply-to email address (handy for unsubscribe mailto links and the like)
-    `___dmgmmSubject` returns the reply-to email address (handy for the HTML title tag in the webversion, for example)
