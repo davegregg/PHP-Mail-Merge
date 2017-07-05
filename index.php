@@ -2,7 +2,7 @@
 /*
 ** Dm/G Mail-Merge 1.0 BETA
 **
-** Author:  David Michael Gregg [http://facebook.com/davegregg]
+** Author:  David Michael Gregg [https://github.com/davegregg]
 ** License: GNU General Public License (GPL) version 3 [http://www.gnu.org/licenses/gpl-3.0.txt]
 ** Support: I do not guarantee that I will respond to support inquiries or feature requests.
 **
